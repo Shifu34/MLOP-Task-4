@@ -1,0 +1,13 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    ports:
+      - "5000:5000"  # Map port 5000 of the container to port 5000 of the host
+    environment:
+      - FLASK_ENV=development  # Set the Flask environment to development

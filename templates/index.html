@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Information Collector</title>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form id="infoForm" method="POST" action="/">
+        <input type="text" name="name" required placeholder="Your Name">
+        <input type="number" name="age" required placeholder="Your Age" min="0">
+        <input type="date" name="dob" required placeholder="Date of Birth">
+        <button type="submit">Submit</button>
+    </form>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
